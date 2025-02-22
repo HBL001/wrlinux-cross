@@ -1,0 +1,11 @@
+# Ignore build directories and temporary files
+/build/
+/tmp/
+*.log
+*.sh
+
+# Ignore compiler cache (if not needed in repo)
+.ccache/
+
+# Ignore Docker specific files if not needed
+docker-compose.yml
