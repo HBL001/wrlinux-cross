@@ -1,1 +1,11 @@
+# Step-by-Step Guide: Building a Cross-Compiler Container
+
+Step 0: Generate (Fetch) the SDK Installer
+
+Set Up Your Yocto Environment
+Open a terminal on your development PC and source your Yocto build environment (adjust the script path as needed):
+
+bitbake core-image-minimal -c populate_sdk
+
+
 docker build -t cu1bo/wrlinux-cross:latest .
