@@ -138,6 +138,9 @@ On any system with Docker installed, run:
 
 ``docker pull cu1bo/wrlinux-cross:latest``
 
+source /opt/wrlinux-toolchain/environment-setup-cortexa8hf-neon-wrs-linux-gnueabi
+
+
 Then you can run the container as before:
 
 ``docker run -it --rm -v /home/user:/home/user cu1bo/wrlinux-cross:latest bash``
