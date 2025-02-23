@@ -1,29 +1,29 @@
 # Base Image
-FROM windriver/wrlx-image:latest
+FROM debian:bullseye
 
 # Install Dependencies
-# Install Dependencies
-RUN dnf update -y && \
-    dnf install -y \
-      make \
-      gcc \
-      gcc-c++ \
+RUN apt-get update && \
+    apt-get install -y \
+      build-essential \
       curl \
       ca-certificates \
       file \
       cmake \
       git \
-      libgpiod-devel \
+      libgpiod-dev \
+      libsqlite3-dev \
       pkg-config \
       python3 \
       python3-numpy \
+      sqlite3 \
+      aptitude \
       locales \
       rsync \
       sudo \
       tmux \
       tree \
       vim && \
-    dnf clean all
+    apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # Create User
 RUN useradd -m -s /bin/bash user
