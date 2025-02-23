@@ -27,8 +27,6 @@ RUN apt-get update && \
       vim && \
     apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-# Disable colored Git output for non-interactive environments
-RUN git config --global color.ui false
 
 # ---------------------------
 # Create User and Working Directory
