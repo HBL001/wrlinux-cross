@@ -1,5 +1,5 @@
 # Base Image
-FROM debian:bullseye
+FROM windriver/wrlx-image:latest
 
 # Install Dependencies
 RUN apt-get update && \
@@ -11,11 +11,9 @@ RUN apt-get update && \
       cmake \
       git \
       libgpiod-dev \
-      libsqlite3-dev \
       pkg-config \
       python3 \
       python3-numpy \
-      sqlite3 \
       aptitude \
       locales \
       rsync \
