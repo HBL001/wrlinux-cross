@@ -2,26 +2,28 @@
 FROM windriver/wrlx-image:latest
 
 # Install Dependencies
-RUN apt-get update && \
-    apt-get install -y \
-      build-essential \
+# Install Dependencies
+RUN dnf update -y && \
+    dnf install -y \
+      make \
+      gcc \
+      gcc-c++ \
       curl \
       ca-certificates \
       file \
       cmake \
       git \
-      libgpiod-dev \
+      libgpiod-devel \
       pkg-config \
       python3 \
       python3-numpy \
-      aptitude \
       locales \
       rsync \
       sudo \
       tmux \
       tree \
       vim && \
-    apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+    dnf clean all
 
 # Create User
 RUN useradd -m -s /bin/bash user
