@@ -27,6 +27,9 @@ Compile the Source File Using the Cross-Compiler:
 Assuming you've already set up your Docker container with the Wind River cross-compiler and have sourced the environment setup script, compile the hello.cpp file:
 
 ```
+arm-wrs-linux-gnueabi-g++ --sysroot=/opt/wrlinux-toolchain/sysroots/armv7at2hf-neon-wrs-linux-gnueabi hello.cpp -o hello
+
+
 arm-wrs-linux-gnueabi-g++ hello.cpp -o hello
 ```
 
